@@ -45,13 +45,14 @@
         </v-layout>
       </v-container>
        <v-bottom-nav
+       fixed
+       app
       :value="true"
       :active.sync="e2"
       :color="color"
-      absolute
+
       shift
-      :fixed="fix"
-      :app="fix"
+
     >
       <v-btn v-for="item in bottomNav" :key="item.id" dark>
         <span>{{item.text}}</span>
