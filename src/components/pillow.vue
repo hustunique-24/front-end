@@ -1,9 +1,11 @@
 <template>
   <v-app id="inspire">
+      <v-content>
   <v-layout row>
+
     <v-flex xs12 sm6 offset-sm3>
       <v-card>
-        <v-card-media src="/static/images/pillow.jpg" height="300px">
+        <v-card-media src="/static/images/pillow.jpg" height="250px">
           <v-layout column class="media">
             <v-card-title>
               <v-btn icon @click="goback()">
@@ -81,7 +83,7 @@
       </v-card>
     </v-flex>
   </v-layout>
-
+      </v-content>
 </v-app>
 </template>
 

@@ -44,20 +44,22 @@
           <router-view></router-view>
         </v-layout>
       </v-container>
-    </v-content>
-    <v-bottom-nav
+       <v-bottom-nav
       :value="true"
       :active.sync="e2"
       :color="color"
       absolute
       shift
       :fixed="fix"
+      :app="fix"
     >
       <v-btn v-for="item in bottomNav" :key="item.id" dark>
         <span>{{item.text}}</span>
         <v-icon>{{item.icon}}</v-icon>
       </v-btn>
     </v-bottom-nav>
+    </v-content>
+   
   </v-app>
 </template>
 
