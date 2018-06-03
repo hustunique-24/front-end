@@ -73,14 +73,14 @@
       fix: true,
       bottomNav: [
           {
-              text: '探索',
-              icon: 'explore',
+              text: '今日',
+              icon: 'today',
               router: 'main',
           },
           {
-              text: '消息',
-              icon: 'chat',
-              router: 'message'
+              text: '探索',
+              icon: 'explore',
+              router: 'explore'
           },
           {
               text: '抱枕',
@@ -100,8 +100,8 @@
     computed: {
       color () {
         switch (this.e2) {
-          case 0: return 'blue-grey'
-          case 1: return 'teal'
+          case 0: return 'teal'
+          case 1: return 'blue-grey'
           case 2: return 'brown'
           case 3: return 'indigo'
         }

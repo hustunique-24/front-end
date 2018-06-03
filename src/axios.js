@@ -41,6 +41,10 @@ export default {
         return instance.post(`/api/login/`, data);
     },
     GetInfo() {
-        return instance.get(`/api/userprofile`);
+        return instance.get(`/api/userprofile/`);
+    },
+    SendMessage(data) {
+        return instance.post(`/api/message/`, data);
+
     }
 }

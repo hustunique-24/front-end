@@ -11,7 +11,7 @@ const mutations = {
         window.localStorage.removeItem('token');
         window.localStorage.removeItem('username');
         state.token = null;
-        state.username = null;
+        state.user = null;
     }
 }
 
