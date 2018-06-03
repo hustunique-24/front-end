@@ -49,12 +49,12 @@ import api from "../axios";
             human_sex: ''
         },
         items: [
-          { icon: 'person_pin', iconClass: 'grey lighten-1 white--text', title: '姓名', subtitle: this.$store.state.username },
-          { icon: 'person_pin', iconClass: 'grey lighten-1 white--text', title: '性别', subtitle: 'null' },
-          { icon: 'person_pin', iconClass: 'grey lighten-1 white--text', title: '年龄', subtitle: 'null' }
+          { icon: 'person_pin', iconClass: 'amber lighten-1 white--text', title: '姓名', subtitle: this.$store.state.username },
+          { icon: 'wc', iconClass: 'blue lighten-1 white--text', title: '性别', subtitle: 'null' },
+          { icon: 'person_pin', iconClass: 'green lighten-1 white--text', title: '年龄', subtitle: 'null' }
         ],
         items2: [
-          { icon: 'assignment', iconClass: 'blue white--text', title: '血型', subtitle: 'null' }
+          { icon: 'assignment', iconClass: 'purple white--text', title: '血型', subtitle: 'null' }
         ],
         sex: '',
       }

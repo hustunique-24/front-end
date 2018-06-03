@@ -128,7 +128,7 @@ import api from "../axios";
           { icon: 'timeline', iconClass: 'green darken-1 white--text', title: '温度', subtitle: '26', type: 'degree' }
         ],
         items2: [
-          { icon: 'vibration', iconClass: 'blue white--text', title: '按摩', subtitle: '进行短暂的震动按摩', type: 'shake' },            
+          { icon: 'vibration', iconClass: 'orange white--text', title: '按摩', subtitle: '进行短暂的震动按摩', type: 'shake' },            
           { icon: 'timer', iconClass: 'blue white--text', title: '闹钟', subtitle: '设定一个闹钟进行提醒' },
           { icon: 'music_note', iconClass: 'purple darken-2 white--text', title: '音乐', subtitle: '播放音乐' }
         ],
