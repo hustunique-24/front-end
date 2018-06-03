@@ -10,7 +10,7 @@ axios.interceptors.request.use = instance.interceptors.request.use;
 // request
 instance.interceptors.request.use(config => {
     if (store.state.token) {
-        config.headers.Authorization = `${store.state.token}`;
+        config.headers.Authorization = `jwt ${store.state.token}`;
     }
     return config;
 }, err => {
@@ -39,5 +39,8 @@ export default {
     },
     Login(data) {
         return instance.post(`/api/login/`, data);
+    },
+    GetInfo() {
+        return instance.get(`/api/userprofile`);
     }
 }

@@ -7,6 +7,7 @@ Vue.use(Vuex);
 
 const state = {
     token: window.localStorage.getItem('token'),
+    username: window.localStorage.getItem('username'),
 }
 
 export default new Vuex.Store({

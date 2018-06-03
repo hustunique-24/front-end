@@ -107,7 +107,7 @@
         </v-card-text>
         <v-divider class="mt-5"></v-divider>
         <v-card-actions>
-          <v-btn flat>取消</v-btn>
+          <v-btn flat>登录</v-btn>
           <v-spacer></v-spacer>
 
           <v-btn color="primary" flat @click="submit()">提交</v-btn>

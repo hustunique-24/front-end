@@ -5,7 +5,7 @@
 
     <v-flex xs12 sm6 offset-sm3>
       <v-card>
-        <v-card-media src="/static/images/pillow.jpg" height="250px">
+        <v-card-media src="/static/images/pillow2.png" height="250px">
           <v-layout column class="media">
             <v-card-title>
               <v-btn icon @click="goback()">
@@ -20,8 +20,8 @@
               </v-btn>
             </v-card-title>
             <v-spacer></v-spacer>
-            <v-card-title class="white--text pl-5 pt-5">
-              <div class="display-1 pl-5 pt-5">抱枕信息</div>
+            <v-card-title class="white--text">
+              <div class="display-1">抱枕信息</div>
             </v-card-title>
           </v-layout>
         </v-card-media>
@@ -43,12 +43,25 @@
                 <v-icon color="indigo">insert_link</v-icon>
             </v-list-tile-action>
             <v-list-tile-content>
-              <v-list-tile-title>正常</v-list-tile-title>
+              <v-list-tile-title>WiFi (正常)</v-list-tile-title>
               <v-list-tile-sub-title>抱枕连接情况</v-list-tile-sub-title>
             </v-list-tile-content>
-            <!-- <v-list-tile-action>
-              <v-icon>chat</v-icon>
-            </v-list-tile-action> -->
+            <v-list-tile-action>
+              <v-icon>wifi_tethering</v-icon>
+            </v-list-tile-action>
+          </v-list-tile>
+          </v-list-tile>
+          <v-list-tile @click="">
+            <v-list-tile-action>
+                <v-icon color="indigo">scatter_plot</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-content>
+              <v-list-tile-title>语音:正常 ; 震动:正常</v-list-tile-title>
+              <v-list-tile-sub-title>传感器自检</v-list-tile-sub-title>
+            </v-list-tile-content>
+            <v-list-tile-action>
+              <v-icon>settings</v-icon>
+            </v-list-tile-action>
           </v-list-tile>
           <v-divider inset></v-divider>
           <v-list-tile @click="">

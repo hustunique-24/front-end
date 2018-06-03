@@ -24,9 +24,10 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar color="light-blue" dark fixed app>
+    <v-toolbar color="green" dark fixed app>
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-      <v-toolbar-title>抱抱管理后台</v-toolbar-title>
+      <v-toolbar-title>Linkeart Pillow</v-toolbar-title>
+
       <v-spacer></v-spacer>
           <v-btn icon>
             <v-icon>search</v-icon>

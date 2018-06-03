@@ -103,6 +103,7 @@ import api from "../axios";
                 console.log(res.data.token);
                 this.$store.dispatch('UserLogin', {
                     token: res.data.token,
+                    username: this.username
                 });
                 this.$router.push({name: 'main'});
             }).catch(err => {

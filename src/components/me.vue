@@ -3,7 +3,7 @@
     <v-flex xs12 sm6 offset-sm3>
       <v-card>
         <v-list two-line subheader>
-          <v-subheader inset>Folders</v-subheader>
+          <v-subheader inset>个人信息</v-subheader>
           <v-list-tile v-for="item in items" :key="item.title" avatar @click="">
             <v-list-tile-avatar>
               <v-icon :class="[item.iconClass]">{{ item.icon }}</v-icon>
@@ -19,7 +19,7 @@
             </v-list-tile-action>
           </v-list-tile>
           <v-divider inset></v-divider>
-          <v-subheader inset>Files</v-subheader>
+          <v-subheader inset>健康信息</v-subheader>
           <v-list-tile v-for="item in items2" :key="item.title" avatar @click="">
             <v-list-tile-avatar>
               <v-icon :class="[item.iconClass]">{{ item.icon }}</v-icon>
@@ -41,19 +41,39 @@
 </template>
 
 <script>
+import api from "../axios";
   export default {
     data () {
       return {
+        userProfile: {
+            human_sex: ''
+        },
         items: [
-          { icon: 'folder', iconClass: 'grey lighten-1 white--text', title: 'Photos', subtitle: 'Jan 9, 2014' },
-          { icon: 'folder', iconClass: 'grey lighten-1 white--text', title: 'Recipes', subtitle: 'Jan 17, 2014' },
-          { icon: 'folder', iconClass: 'grey lighten-1 white--text', title: 'Work', subtitle: 'Jan 28, 2014' }
+          { icon: 'person_pin', iconClass: 'grey lighten-1 white--text', title: '姓名', subtitle: this.$store.state.username },
+          { icon: 'person_pin', iconClass: 'grey lighten-1 white--text', title: '性别', subtitle: 'null' },
+          { icon: 'person_pin', iconClass: 'grey lighten-1 white--text', title: '年龄', subtitle: 'null' }
         ],
         items2: [
-          { icon: 'assignment', iconClass: 'blue white--text', title: 'Vacation itinerary', subtitle: 'Jan 20, 2014' },
-          { icon: 'call_to_action', iconClass: 'amber white--text', title: 'Kitchen remodel', subtitle: 'Jan 10, 2014' }
-        ]
+          { icon: 'assignment', iconClass: 'blue white--text', title: '血型', subtitle: 'null' }
+        ],
+        sex: '',
       }
+    },
+    created() {
+        this.init();
+    },
+    methods: {
+        init() {
+            api.GetInfo().then(res => {
+                this.userProfile = res.data[0];
+                this.items[1].subtitle = this.userProfile.human_sex;
+                this.items[2].subtitle = this.userProfile.human_age;
+                this.items2[0].subtitle = this.userProfile.human_xue;
+                console.log(res.data[0]);
+            }).catch(err => {
+                console.log(err);
+            })
+        }
     }
   }
 </script>
