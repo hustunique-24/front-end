@@ -82,7 +82,6 @@
           v-model="human_status"
           prepend-icon="adb"
           label="用户状态"
-          type="number"
         ></v-text-field>
 
         <v-select
@@ -124,6 +123,7 @@
 </template>
 
 <script>
+import api from "../axios";
   export default {
     data: () => ({
         bloodCh: [
@@ -152,7 +152,19 @@
     },
     methods: {
         submit() {
-            
+            api.Register({
+                username: this.username,
+                password: this.password,
+                bao_id: this.bao_id,
+                human_age: this.human_age,
+                human_status: this.human_status,
+                human_xue: this.human_xue,
+                human_sex: this.human_sex
+            }).then(res => {
+                console.log(res);
+            }).catch(err => {
+                console.log(err);
+            })
         }
     }
   }

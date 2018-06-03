@@ -34,7 +34,10 @@ instance.interceptors.response.use(response => {
 });
 
 export default {
-    Bind(data) {
-        return instance.post('/api/login', data);
+    Register(data) {
+        return instance.post('/api/register/', data);
     },
+    Login(data) {
+        return instance.post(`/api/login/`, data);
+    }
 }

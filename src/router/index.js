@@ -10,7 +10,8 @@ import pillow from '@/components/pillow'
 import message from '@/components/message'
 import me from '@/components/me'
 
-import bind from '@/components/bind'
+import register from '@/components/register'
+import login from '@/components/login'
 
 Vue.use(Router)
 
@@ -56,9 +57,20 @@ const router = new Router({
             },
         },
         {
-            path: '/bind',
-            name: 'bind',
-            component: bind,
+            path: '/register',
+            name: 'register',
+            component: register,
+            meta: {
+              requireAuth: false,
+            },
+        },
+        {
+            path: '/login',
+            name: 'login',
+            component: login,
+            meta: {
+            requireAuth: false,
+            },
         }
     ]
 })
@@ -71,7 +83,7 @@ router.beforeEach((to, from, next) => {
         }
         else {
             next({
-                path: '/bind',
+                path: '/login',
                 query: {
                     redirect: to.fullPath
                 }
