@@ -46,5 +46,8 @@ export default {
     SendMessage(data) {
         return instance.post(`/api/message/`, data);
 
+    },
+    GetHeart() {
+        return instance.get(`/api/wenshi`);
     }
 }

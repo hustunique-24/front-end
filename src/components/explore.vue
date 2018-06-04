@@ -148,6 +148,10 @@ import api from "../axios";
         picker: '11:15',
       }
     },
+    created() {
+        console.log(12321);
+        this.init();
+    },
     methods: {
         show_fulldialog(item) {
             this.dialog_full = true;
@@ -176,10 +180,20 @@ import api from "../axios";
             }).then(res => {
                 console.log(res);
                 this.dialog_notice = false; 
+                this.dialog_full = false;
             }).catch(err => {
                 console.log(err);
             })
+        },
+        init() {
+            console.log(2232);
+            api.GetHeart().then(res => {
+                console.log(res);
+            }).catch(err => {
+                console.log(err);
+            });
         }
-    }
+    },
+
   }
 </script>
